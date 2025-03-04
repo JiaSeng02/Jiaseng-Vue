@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核心概念1</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <img :src="image" style='width: 150px' alt="" /> -->
+    </div>
+
+    <script src="./vue.min.js"></script>
+    <script>
+        var vm = new Vue ({
+            data: {
+                title: "Hello World",
+                author: "Jiaseng",
+                image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
+
+            },
+            template: `<div>
+                <h1>核心概念1 {{title}}</h1>
+                <p>Author: {{author}}</p>
+                <img :src="image" style='width: 150px' alt="" />
+                </div>`,
+        });
+        vm.$mount('#app'); //v-bind
+    </script>
+</body>
+</html>
