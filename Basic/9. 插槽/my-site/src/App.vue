@@ -7,7 +7,10 @@
         </div>
       </template>
       <template #default>
-        中间主区域
+        <div class="message-side">
+          <message />
+        </div>
+        <layout2 />
       </template>
     </Layout>
   </div>
@@ -16,10 +19,14 @@
 <script>
 import Layout from "./components/Layout";
 import SiteAside from "./components/SiteAside";
+import message from "./components/Message/test.vue";
+import layout2 from "./components/Layout2/test.vue";
 export default {
   components: {
     Layout,
     SiteAside,
+    message,
+    layout2,
   },
 };
 </script>
