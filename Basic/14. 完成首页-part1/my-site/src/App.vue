@@ -7,7 +7,9 @@
         </div>
       </template>
       <template #default>
-        <RouterView />
+        <div class="main">
+          <RouterView />
+        </div>
       </template>
     </Layout>
   </div>
@@ -32,5 +34,12 @@ export default {
 .aside {
   width: 250px;
   height: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 </style>
