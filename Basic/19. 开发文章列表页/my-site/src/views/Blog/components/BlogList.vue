@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-list-container" ref="container" v-loading="isLoading">
+  <div class="blog-list-container" ref="mainContainer" v-loading="isLoading">
     <ul>
       <li v-for="item in data.rows" :key="item.id">
         <div class="thumb" v-if="item.thumb">
@@ -63,8 +63,9 @@ import Pager from "@/components/Pager";
 import fetchData from "@/mixins/fetchData.js";
 import { getBlogs } from "@/api/blog.js";
 import { formatDate } from "@/utils";
+import mainScroll from "@/mixins/mainScroll.js";
 export default {
-  mixins: [fetchData({})],
+  mixins: [fetchData({}), mainScroll("mainContainer")],
   components: {
     Pager,
   },
@@ -119,7 +120,7 @@ export default {
     async $route() {
       this.isLoading = true;
       // 滚动高度为0
-      this.$refs.container.scrollTop = 0;
+      this.$refs.mainContainer.scrollTop = 0;
       this.data = await this.fetchData();
       this.isLoading = false;
     },
