@@ -15,10 +15,3 @@ new Vue({
   router,
   render: (h) => h(App),
 }).$mount("#app");
-
-// 随便测试一下接口
-import * as blogApi from "./api/blog";
-
-blogApi.getComments("123123").then((r) => {
-  console.log(r);
-});
