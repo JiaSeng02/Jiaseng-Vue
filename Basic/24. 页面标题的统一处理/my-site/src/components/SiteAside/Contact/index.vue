@@ -9,7 +9,7 @@
       </a>
     </li>
     <li>
-      <a href="`mailto:${data.main}`">
+      <a :href="`mailto:${data.main}`">
         <div class="icon">
           <Icon type="mail" />
         </div>
